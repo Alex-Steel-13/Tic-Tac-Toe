@@ -1,5 +1,7 @@
 # Tic-Tac-Toe
 Inside this repository are my tic-tac-toe projects
 This project was my introduction to artificial intelligence, through creating an algorithm that could play Noughts and Crosses (Tic-Tac-Toe). I started by using a 2D list to make the board. This worked well as it was easy to make the evaluation function which works out the state of the board, whether someone has won, or if the game is still going.
+
 The Minimax algorithm works by searching all of the following boards until they reach a terminal state, which is a win, draw or loss. Then the two players in the game are either maximising or minimising the score. The score of a board is 10 if noughts won, and -10 if crosses won, and 0 if it is a draw. The noughts would be maximising, and on their turn they would choose the height score, and on a crosses turn they would choose the smallest score. So the recursive minimax function will search all the boards, then work its way back to the starting position, calculating the best move. 
+
 This worked well, however was slow. There were two ways I could optimise it. I could either make the code run faster, or reduce the number of positions that the computer searches. I started by reducing the number of positions searched. I used alpha-beta pruning, which will reduce the number of boards searched by seeing if the person/ai would ever chose that move as it would go to a losing position. This sped up the ai, as it had to search less boards
